@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var days: UILabel!
+    @IBOutlet weak var hours: UILabel!
+    @IBOutlet weak var minutes: UILabel!
+    @IBOutlet weak var seconds: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
