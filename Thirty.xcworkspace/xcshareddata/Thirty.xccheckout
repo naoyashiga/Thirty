@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>405B2714-601D-4252-9EBD-532D309CE2D6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Thirty</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE29CC1B580C2EE864D2A4158A9A9A253319E3B7</key>
+		<string>https://github.com/naoyashiga/Thirty.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Thirty.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE29CC1B580C2EE864D2A4158A9A9A253319E3B7</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/naoyashiga/Thirty.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE29CC1B580C2EE864D2A4158A9A9A253319E3B7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE29CC1B580C2EE864D2A4158A9A9A253319E3B7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Thirty</string>
+		</dict>
+	</array>
+</dict>
+</plist>
