@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -40,12 +41,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxb-sL-cgC">
+                                <rect key="frame" x="538" y="14" width="49" height="30"/>
+                                <state key="normal" title="Setting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kv6-BZ-goH" kind="show" id="517-9Z-IKo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="0oD-l4-QSJ" secondAttribute="centerX" id="4a4-XR-aMe"/>
                             <constraint firstAttribute="centerX" secondItem="via-B1-QLG" secondAttribute="centerX" id="JEB-os-2PD"/>
+                            <constraint firstItem="uxb-sL-cgC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="14" id="KPL-U0-xuF"/>
                             <constraint firstItem="0oD-l4-QSJ" firstAttribute="top" secondItem="A8Z-Bi-VGt" secondAttribute="bottom" constant="105" id="Vn7-4K-vdU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxb-sL-cgC" secondAttribute="trailing" constant="-3" id="fa1-dm-SqM"/>
                             <constraint firstAttribute="centerX" secondItem="A8Z-Bi-VGt" secondAttribute="centerX" id="hFM-Wg-bFf"/>
                             <constraint firstAttribute="centerX" secondItem="W3s-hF-0y6" secondAttribute="centerX" id="vb3-CW-NFM"/>
                             <constraint firstItem="A8Z-Bi-VGt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="z4G-wJ-uEa"/>
@@ -60,6 +72,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="37" y="137"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="MoS-Sb-Das">
+            <objects>
+                <viewController id="kv6-BZ-goH" customClass="SettingViewController" customModule="Thirty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ree-4C-AXr"/>
+                        <viewControllerLayoutGuide type="bottom" id="83v-ca-tA0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mQw-gm-MRP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-KQ-H4S">
+                                <rect key="frame" x="279" y="42" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="962-yG-q20">
+                                <rect key="frame" x="16" y="20" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack" destination="yX9-7T-hyC" eventType="touchUpInside" id="dnV-4X-nal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qUD-KQ-H4S" secondAttribute="centerX" id="Et6-Pw-jGo"/>
+                            <constraint firstItem="962-yG-q20" firstAttribute="top" secondItem="ree-4C-AXr" secondAttribute="bottom" id="HaH-GY-0Gv"/>
+                            <constraint firstItem="962-yG-q20" firstAttribute="leading" secondItem="mQw-gm-MRP" secondAttribute="leadingMargin" id="Spw-ej-7nO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yX9-7T-hyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="137"/>
         </scene>
     </scenes>
 </document>

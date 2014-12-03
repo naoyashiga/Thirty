@@ -15,6 +15,7 @@
 		9A7335C71A2F16E700359A96 /* ThirtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335C61A2F16E700359A96 /* ThirtyTests.swift */; };
 		9A7335D11A2F27B300359A96 /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7335D01A2F27B300359A96 /* Timepiece.framework */; };
 		9A7335D21A2F27B300359A96 /* Timepiece.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7335D01A2F27B300359A96 /* Timepiece.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A7335D51A2F36B400359A96 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335D41A2F36B400359A96 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9A7335C51A2F16E700359A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7335C61A2F16E700359A96 /* ThirtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirtyTests.swift; sourceTree = "<group>"; };
 		9A7335D01A2F27B300359A96 /* Timepiece.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timepiece.framework; path = Carthage.build/iOS/Timepiece.framework; sourceTree = "<group>"; };
+		9A7335D41A2F36B400359A96 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9A7335B71A2F16E700359A96 /* Images.xcassets */,
 				9A7335B91A2F16E700359A96 /* LaunchScreen.xib */,
 				9A7335AE1A2F16E700359A96 /* Supporting Files */,
+				9A7335D41A2F36B400359A96 /* SettingViewController.swift */,
 			);
 			path = Thirty;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				9A7335B31A2F16E700359A96 /* ViewController.swift in Sources */,
 				9A7335B11A2F16E700359A96 /* AppDelegate.swift in Sources */,
+				9A7335D51A2F36B400359A96 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
