@@ -73,12 +73,12 @@ class ViewController: UIViewController {
         println("click")
         scaleView(myView, magnitude: 0.005)
     }
-    @IBAction func settingBtn(sender: UIButton) {
-        println("setting")
-        let settingVC = SettingViewController()
-        settingVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(settingVC, animated: true, completion: nil)
-    }
+//    @IBAction func settingBtn(sender: UIButton) {
+//        println("setting")
+//        let settingVC = SettingViewController()
+//        settingVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+//        self.presentViewController(settingVC, animated: true, completion: nil)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

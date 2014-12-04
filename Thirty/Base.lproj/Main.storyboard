@@ -47,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="settingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g63-F9-gDa"/>
+                                    <segue destination="kv6-BZ-goH" kind="show" id="75u-eh-80U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjR-FE-0to">
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37" y="137"/>
+            <point key="canvasLocation" x="40" y="161"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="MoS-Sb-Das">
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-KQ-H4S">
-                                <rect key="frame" x="279" y="42" width="65" height="21"/>
+                                <rect key="frame" x="268" y="282" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,16 +109,27 @@
                                 </state>
                                 <connections>
                                     <action selector="goBack" destination="yX9-7T-hyC" eventType="touchUpInside" id="dnV-4X-nal"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fH0-yA-bF9"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wyK-CU-Hyo">
+                                <rect key="frame" x="0.0" y="351" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="439387953.36534297">
+                                    <!--2014-12-04 12:12:33 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qUD-KQ-H4S" secondAttribute="centerX" id="Et6-Pw-jGo"/>
                             <constraint firstItem="962-yG-q20" firstAttribute="top" secondItem="ree-4C-AXr" secondAttribute="bottom" id="HaH-GY-0Gv"/>
+                            <constraint firstAttribute="centerX" secondItem="wyK-CU-Hyo" secondAttribute="centerX" id="MML-oJ-j8g"/>
                             <constraint firstItem="962-yG-q20" firstAttribute="leading" secondItem="mQw-gm-MRP" secondAttribute="leadingMargin" id="Spw-ej-7nO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="wyK-CU-Hyo" id="xsX-2O-MUJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yX9-7T-hyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

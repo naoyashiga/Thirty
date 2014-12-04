@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Timepiece
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController{
+    @IBOutlet weak var datePicker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
-
-        // Do any additional setup after loading the view.
+        datePicker.datePickerMode = UIDatePickerMode.Date
+        
+        //開始日付
+        datePicker.setDate(NSDate() - 25.year, animated: false)
+        //今日から30年前
+        datePicker.minimumDate = NSDate() - 30.year
+        //今日
+        datePicker.maximumDate = NSDate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +31,6 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
