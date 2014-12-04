@@ -24,6 +24,8 @@ class SettingViewController: UIViewController{
         datePicker.minimumDate = NSDate() - 30.year
         //今日
         datePicker.maximumDate = NSDate()
+        
+        datePicker.addTarget(self, action: Selector("dataPickerChanged"), forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +33,13 @@ class SettingViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+//    func datePickerChanged(dp:UIDatePicker) {
+//        println(dp.date)
+//    }
+    
+    func datePickerChanged() {
+//        println(dp.date)
+    }
     /*
     // MARK: - Navigation
 

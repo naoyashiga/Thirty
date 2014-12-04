@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         let minutes = components.minute
         let second = components.second
         
-        println(components)
+//        println(components)
         
-        println(birthday)
+//        println(birthday)
         
 
         // myViewを生成.
