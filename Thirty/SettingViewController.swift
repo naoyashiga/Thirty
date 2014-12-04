@@ -16,7 +16,10 @@ class SettingViewController: UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
+//        datePicker.locale = NSLocale(localeIdentifier: "ja_JP")
         datePicker.datePickerMode = UIDatePickerMode.Date
+        datePicker.timeZone = NSTimeZone.localTimeZone()
+        datePicker.calendar = NSCalendar.currentCalendar()
         
         //開始日付
         datePicker.setDate(NSDate() - 25.year, animated: false)
@@ -25,7 +28,7 @@ class SettingViewController: UIViewController{
         //今日
         datePicker.maximumDate = NSDate()
         
-        datePicker.addTarget(self, action: Selector("dataPickerChanged"), forControlEvents: UIControlEvents.ValueChanged)
+//        datePicker.addTarget(self, action: Selector("dataPickerChanged"), forControlEvents: UIControlEvents.ValueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +40,8 @@ class SettingViewController: UIViewController{
 //        println(dp.date)
 //    }
     
-    func datePickerChanged() {
-//        println(dp.date)
+    @IBAction func datePickerChanged(sender: UIDatePicker) {
+        println(sender.date)
     }
     /*
     // MARK: - Navigation
