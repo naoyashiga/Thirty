@@ -15,12 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var seconds: UILabel!
     var myView:UIView!
+    var birthday:NSDate!
+    var xDay:NSDate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
-        var birthday:NSDate!
         
         if (ud.objectForKey("birthday") != nil){
             //保存した誕生日を取得
@@ -31,36 +32,25 @@ class ViewController: UIViewController {
         }
         
         //30年後
-        var xDay = birthday + 30.year
+        xDay = birthday + 30.year
        
         //日本時間との時差
         xDay = xDay.beginningOfDay - 15.hours
         
-        println(birthday)
-        println(xDay)
+        // 一秒ごとにupdateを呼び出す
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         
-        let now = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(
-            .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
-            fromDate: now,
-            toDate: xDay,
-            options:nil)
+//        println(birthday)
+//        println(xDay)
         
-        //ラベルを更新
-        days.text = String(components.day)
-        hours.text = String(components.hour)
-        minutes.text = String(components.minute)
-        seconds.text = String(components.second)
         
-        println(now)
-        println(components)
-        
+//        println(now)
+//        println(components)
 
         // myViewを生成.
-        myView = UIView(frame: CGRectMake(0, 0, 100, 100))
-        myView.backgroundColor = UIColor.orangeColor()
-        myView.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
+//        myView = UIView(frame: CGRectMake(0, 0, 100, 100))
+//        myView.backgroundColor = UIColor.orangeColor()
+//        myView.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
         
 //        self.view.addSubview(myView)
         
@@ -84,15 +74,28 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func sampleBtn(sender: UIButton) {
-        println("click")
-        scaleView(myView, magnitude: 0.005)
+    
+    func update(){
+        let now = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(
+            .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
+            fromDate: now,
+            toDate: xDay,
+            options:nil)
+        
+        //ラベルを更新
+        days.text = String(components.day)
+        hours.text = String(components.hour)
+        minutes.text = String(components.minute)
+        seconds.text = String(components.second)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
 
 }

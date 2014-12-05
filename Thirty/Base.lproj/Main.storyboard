@@ -95,15 +95,6 @@
                                     <segue destination="kv6-BZ-goH" kind="show" id="75u-eh-80U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjR-FE-0to">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sampleBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bkI-4s-CnK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,7 +105,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="uxb-sL-cgC" secondAttribute="trailing" constant="-3" id="fa1-dm-SqM"/>
                             <constraint firstAttribute="centerX" secondItem="A8Z-Bi-VGt" secondAttribute="centerX" id="hFM-Wg-bFf"/>
                             <constraint firstAttribute="centerX" secondItem="W3s-hF-0y6" secondAttribute="centerX" id="vb3-CW-NFM"/>
-                            <constraint firstAttribute="centerX" secondItem="AjR-FE-0to" secondAttribute="centerX" id="wFE-TQ-B1s"/>
                             <constraint firstItem="A8Z-Bi-VGt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="z4G-wJ-uEa"/>
                         </constraints>
                     </view>
