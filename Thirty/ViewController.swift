@@ -23,29 +23,21 @@ class ViewController: UIViewController {
         let ud = NSUserDefaults.standardUserDefaults()
         var birthday:NSDate!
         
-        if let birthDate = ud.objectForKey("birthday") as? [String] {
-            var y = birthDate[0]
-            var m = birthDate[1]
-            var d = birthDate[2]
+        if (ud.objectForKey("birthday") != nil){
             
-//            birthday = NSDate.date(year: y, month: m, day: d)
-            birthday = NSDate.date(year: 1997, month: 6, day: 2)
+            birthday = ud.objectForKey("birthday") as NSDate
             
-            println("a")
         }else{
-            var birthdayArray:[String] = ["1987","5","23"]
-            ud.setObject(birthdayArray, forKey: "birthday")
-            ud.synchronize()
-            
-            birthday = NSDate.date(year: 1987, month: 6, day: 2)
             println("b")
+            birthday = NSDate.date(year: 1997, month: 6, day: 2)
         }
         
-        let xDay = birthday + 30.year
+        var xDay = birthday + 30.year
+       
+        xDay = xDay.beginningOfDay - 15.hours
         
         println(birthday)
         println(xDay)
-        
         
         
         let now = NSDate()
@@ -61,6 +53,7 @@ class ViewController: UIViewController {
         let minutes = components.minute
         let second = components.second
         
+        println(now)
         
         println(components)
         

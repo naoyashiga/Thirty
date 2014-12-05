@@ -1,15 +1,15 @@
 //
-//  SettingViewController.swift
+//  InitViewController.swift
 //  Thirty
 //
-//  Created by naoyashiga on 2014/12/03.
+//  Created by naoyashiga on 2014/12/05.
 //  Copyright (c) 2014年 naoyashiga. All rights reserved.
 //
 
 import UIKit
 import Timepiece
 
-class SettingViewController: UIViewController{
+class InitViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     var monthDict: Dictionary<String,String> = [
         "Jan":"1",
@@ -28,7 +28,6 @@ class SettingViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         datePicker.datePickerMode = UIDatePickerMode.Date
         datePicker.timeZone = NSTimeZone.localTimeZone()
         datePicker.calendar = NSCalendar.currentCalendar()
@@ -46,19 +45,7 @@ class SettingViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func datePickerChanged(sender: UIDatePicker) {
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone.localTimeZone()
-        
-        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        
-        //ユーザデフォルト
-        let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject(sender.date, forKey: "birthday")
-        ud.synchronize()
-    }
+
     /*
     // MARK: - Navigation
 
@@ -68,5 +55,30 @@ class SettingViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func datePickerChanged(sender: UIDatePicker) {
+        var dateFormatter = NSDateFormatter()
+        //ローカル時間
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        
+        //表示形式
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        var strDate = dateFormatter.stringFromDate(sender.date)
+        
+//        var strArray = strDate.componentsSeparatedByString(" ")
+//        var month = String(monthDict[strArray[0]]!)
+//        var day = strArray[1].componentsSeparatedByString(",")[0]
+//        var year = strArray[2]
+//        println(month)
+//        println(day)
+//        println(year)
+//        
+//        var birthdayArray:[String] = [year,month,day]
+        
+        //ユーザデフォルト
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(sender.date, forKey: "birthday")
+        ud.synchronize()
+    }
 }
