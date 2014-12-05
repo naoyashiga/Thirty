@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var birthdayArray:[String] = ["1989","7","11"]
+        var birthdayArray:[String] = ["1987","5","23"]
         
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
@@ -27,7 +27,10 @@ class ViewController: UIViewController {
         
         
         
-        
+        if let names = ud.objectForKey("birthday") as? [String] {
+            // namesを参照可能
+            println(names[0])
+        }
         
         let birthday = NSDate.date(year: 1987, month: 6, day: 2)
         let xDay = NSDate.date(year: 2014, month: 12, day: 3, hour: 21, minute: 0, second: 0)
@@ -83,12 +86,6 @@ class ViewController: UIViewController {
         println("click")
         scaleView(myView, magnitude: 0.005)
     }
-//    @IBAction func settingBtn(sender: UIButton) {
-//        println("setting")
-//        let settingVC = SettingViewController()
-//        settingVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-//        self.presentViewController(settingVC, animated: true, completion: nil)
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
