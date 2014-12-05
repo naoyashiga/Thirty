@@ -18,34 +18,42 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var birthdayArray:[String] = ["1987","5","23"]
         
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
-//        ud.setObject(birthdayArray, forKey: "birthday")
-//        ud.synchronize()
+        var birthday:NSDate!
         
-        
-        
-        if let names = ud.objectForKey("birthday") as? [String] {
-            // namesを参照可能
-            println(names[0])
-        }else{
-            println("none")
+        if let birthDate = ud.objectForKey("birthday") as? [String] {
+            var y = birthDate[0]
+            var m = birthDate[1]
+            var d = birthDate[2]
             
+//            birthday = NSDate.date(year: y, month: m, day: d)
+            birthday = NSDate.date(year: 1997, month: 6, day: 2)
+            
+            println("a")
+        }else{
+            var birthdayArray:[String] = ["1987","5","23"]
+            ud.setObject(birthdayArray, forKey: "birthday")
+            ud.synchronize()
+            
+            birthday = NSDate.date(year: 1987, month: 6, day: 2)
+            println("b")
         }
         
-        let birthday = NSDate.date(year: 1987, month: 6, day: 2)
-        let xDay = NSDate.date(year: 2014, month: 12, day: 3, hour: 21, minute: 0, second: 0)
+        let xDay = birthday + 30.year
+        
+        println(birthday)
+        println(xDay)
         
         
         
-        let date = NSDate()
+        let now = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(
             .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
-            fromDate: xDay,
-            toDate: date,
+            fromDate: now,
+            toDate: xDay,
             options:nil)
         
         let year = components.year
@@ -53,7 +61,8 @@ class ViewController: UIViewController {
         let minutes = components.minute
         let second = components.second
         
-//        println(components)
+        
+        println(components)
         
 //        println(birthday)
         
