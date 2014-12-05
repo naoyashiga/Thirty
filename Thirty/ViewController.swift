@@ -22,14 +22,17 @@ class ViewController: UIViewController {
         
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject(birthdayArray, forKey: "birthday")
-        ud.synchronize()
+//        ud.setObject(birthdayArray, forKey: "birthday")
+//        ud.synchronize()
         
         
         
         if let names = ud.objectForKey("birthday") as? [String] {
             // namesを参照可能
             println(names[0])
+        }else{
+            println("none")
+            
         }
         
         let birthday = NSDate.date(year: 1987, month: 6, day: 2)
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
         myView.backgroundColor = UIColor.orangeColor()
         myView.layer.position = CGPointMake(self.view.frame.width/2, self.view.frame.height/2)
         
-        self.view.addSubview(myView)
+//        self.view.addSubview(myView)
         
     }
     
