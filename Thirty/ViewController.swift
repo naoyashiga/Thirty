@@ -18,46 +18,43 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
         var birthday:NSDate!
         
         if (ud.objectForKey("birthday") != nil){
-            
+            //保存した誕生日を取得
             birthday = ud.objectForKey("birthday") as NSDate
-            
         }else{
             println("b")
             birthday = NSDate.date(year: 1997, month: 6, day: 2)
         }
         
+        //30年後
         var xDay = birthday + 30.year
        
+        //日本時間との時差
         xDay = xDay.beginningOfDay - 15.hours
         
         println(birthday)
         println(xDay)
         
-        
         let now = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(
-            .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
+            .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
             fromDate: now,
             toDate: xDay,
             options:nil)
         
-        let year = components.year
-        let hour = components.hour
-        let minutes = components.minute
-        let second = components.second
+        //ラベルを更新
+        days.text = String(components.day)
+        hours.text = String(components.hour)
+        minutes.text = String(components.minute)
+        seconds.text = String(components.second)
         
         println(now)
-        
         println(components)
-        
-//        println(birthday)
         
 
         // myViewを生成.
