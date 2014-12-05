@@ -18,7 +18,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var birthdayArray:[String] = ["1989","7","11"]
+        
+        //ユーザデフォルト
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(birthdayArray, forKey: "birthday")
+        ud.synchronize()
+        
+        
+        
+        
+        
         let birthday = NSDate.date(year: 1987, month: 6, day: 2)
         let xDay = NSDate.date(year: 2014, month: 12, day: 3, hour: 21, minute: 0, second: 0)
         

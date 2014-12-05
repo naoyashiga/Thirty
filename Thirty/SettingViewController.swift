@@ -11,6 +11,20 @@ import Timepiece
 
 class SettingViewController: UIViewController{
     @IBOutlet weak var datePicker: UIDatePicker!
+    var monthDict: Dictionary<String,String> = [
+        "Jan":"1",
+        "Feb":"2",
+        "Mar":"3",
+        "Apr":"4",
+        "May":"5",
+        "Jun":"6",
+        "Jul":"7",
+        "Aug":"8",
+        "Sep":"9",
+        "Oct":"10",
+        "Nov":"11",
+        "Dec":"12"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +56,31 @@ class SettingViewController: UIViewController{
     
     @IBAction func datePickerChanged(sender: UIDatePicker) {
         println(sender.date)
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        
+        var strDate = dateFormatter.stringFromDate(sender.date)
+        
+        println(strDate)
+        
+        var strArray = strDate.componentsSeparatedByString(" ")
+        var month = String(monthDict[strArray[0]]!)
+        var day = strArray[1].componentsSeparatedByString(",")[0]
+        var year = strArray[2]
+        println(month)
+        println(day)
+        println(year)
+        
+        var birthdayArray:[String] = [year,month,day]
+        
+        //ユーザデフォルト
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(birthdayArray, forKey: "birthday")
+        ud.synchronize()
     }
     /*
     // MARK: - Navigation
