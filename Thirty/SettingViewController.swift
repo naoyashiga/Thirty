@@ -28,6 +28,8 @@ class SettingViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //ナビゲーションバー非表示
+        self.navigationController?.navigationBarHidden = true
         
         datePicker.datePickerMode = UIDatePickerMode.Date
         datePicker.timeZone = NSTimeZone.localTimeZone()

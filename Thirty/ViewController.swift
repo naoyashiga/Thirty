@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //ナビゲーションバー非表示
+        self.navigationController?.navigationBarHidden = true
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
         
@@ -97,6 +99,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+    }
 
 }
 
