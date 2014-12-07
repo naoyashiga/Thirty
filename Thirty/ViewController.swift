@@ -20,29 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ナビゲーションバー非表示
-        self.navigationController?.navigationBarHidden = true
-        //ユーザデフォルト
-        let ud = NSUserDefaults.standardUserDefaults()
         
-        if (ud.objectForKey("birthday") != nil){
-            //保存した誕生日を取得
-            birthday = ud.objectForKey("birthday") as NSDate
-            println(birthday)
-        }else{
-            
-            //最初に誕生日を設定
-            settingAlert()
-            println("b")
-            birthday = NSDate.date(year: 1997, month: 6, day: 2)
-        }
-        
-        //30年後
-        xDay = birthday + 30.year
-       
-        //日本時間との時差
-        xDay = xDay.beginningOfDay - 15.hours
-        
+        //誕生日を設定
+        setBirthday()
         // 一秒ごとにupdateを呼び出す
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         
@@ -80,6 +60,29 @@ class ViewController: UIViewController {
         
     }
     
+    func setBirthday(){
+        //ユーザデフォルト
+        let ud = NSUserDefaults.standardUserDefaults()
+        
+        if (ud.objectForKey("birthday") != nil){
+            //保存した誕生日を取得
+            birthday = ud.objectForKey("birthday") as NSDate
+            println(birthday)
+        }else{
+            
+            //最初に誕生日を設定
+            settingAlert()
+            println("b")
+            birthday = NSDate.date(year: 1997, month: 6, day: 2)
+        }
+        
+        //30年後
+        xDay = birthday + 30.year
+       
+        //日本時間との時差
+        xDay = xDay.beginningOfDay - 15.hours
+        
+    }
     
     func update(){
         let now = NSDate()
@@ -120,6 +123,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func unwindToTop(segue: UIStoryboardSegue) {
+        //誕生日を再設定
+        setBirthday()
     }
 
 }
