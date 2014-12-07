@@ -1,63 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TfZ-8S-dWw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Init View Controller-->
-        <scene sceneID="ANc-Tv-PTL">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tld-gi-tbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="kyL-kC-hWg" customClass="InitViewController" customModule="Thirty" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="23T-BL-KHI"/>
-                        <viewControllerLayoutGuide type="bottom" id="sfo-v9-vFz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QZw-eA-5Cs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tSL-Pn-gAs">
-                                <rect key="frame" x="0.0" y="273" width="600" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="439463887.69376701">
-                                    <!--2014-12-05 09:18:07 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="datePickerChanged:" destination="kyL-kC-hWg" eventType="valueChanged" id="pba-m9-stw"/>
-                                </connections>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imh-hK-xRG">
-                                <rect key="frame" x="284" y="514" width="33" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="next" id="f17-Je-bqg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhq-rh-tZp">
-                                <rect key="frame" x="268" y="220" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="rhq-rh-tZp" secondAttribute="centerX" id="8fU-lM-vlf"/>
-                            <constraint firstAttribute="centerX" secondItem="tSL-Pn-gAs" secondAttribute="centerX" id="Hnn-Ji-tRe"/>
-                            <constraint firstAttribute="centerX" secondItem="imh-hK-xRG" secondAttribute="centerX" id="PTZ-ey-Wo5"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="xuf-FO-gTM"/>
-                    <connections>
-                        <outlet property="datePicker" destination="tSL-Pn-gAs" id="IEu-nE-6mZ"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-624" y="161"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -136,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sVs-FP-tDf"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mhN-TD-tIC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q43-Vp-2TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +140,4 @@
             <point key="canvasLocation" x="784" y="161"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sVs-FP-tDf"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-EAIntroView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WSCoachMarksView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>21ACD45A3280FC44D807093C</key>
+		<key>2193CB26BE5F2363027A0F87</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9653839DD4BFD2628A403B8F</key>
+		<key>286CDD89BF0AB0B5FA5FEC51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E4F99D0F17A08100833C4EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6DD1271E3E6E70641C3B26A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
