@@ -20,6 +20,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fontName = "Didot"
+        let fontSize:CGFloat = 110.0
+        
+        //フォント設定
+        days.font = UIFont(name: fontName, size: fontSize)
+        hours.font = UIFont(name: fontName, size: fontSize)
+        minutes.font = UIFont(name: fontName, size: fontSize)
+        seconds.font = UIFont(name: fontName, size: fontSize)
         
         //誕生日を設定
         setBirthday()
