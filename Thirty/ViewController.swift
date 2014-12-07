@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     var myView:UIView!
     var birthday:NSDate!
     var xDay:NSDate!
-    var fontSize:CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
