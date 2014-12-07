@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A4B3D571A31B1F3005DD9CE /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B3D561A31B1F3005DD9CE /* InitViewController.swift */; };
 		9A7335B11A2F16E700359A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335B01A2F16E700359A96 /* AppDelegate.swift */; };
 		9A7335B31A2F16E700359A96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335B21A2F16E700359A96 /* ViewController.swift */; };
 		9A7335B61A2F16E700359A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7335B41A2F16E700359A96 /* Main.storyboard */; };
@@ -47,7 +46,6 @@
 /* Begin PBXFileReference section */
 		2BCB8112CF556AE3F6C79177 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEDE6B444F09A66B7E1870 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9A4B3D561A31B1F3005DD9CE /* InitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		9A7335AB1A2F16E700359A96 /* Thirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7335AF1A2F16E700359A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7335B01A2F16E700359A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				9A7335B91A2F16E700359A96 /* LaunchScreen.xib */,
 				9A7335AE1A2F16E700359A96 /* Supporting Files */,
 				9A7335D41A2F36B400359A96 /* SettingViewController.swift */,
-				9A4B3D561A31B1F3005DD9CE /* InitViewController.swift */,
 			);
 			path = Thirty;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 			files = (
 				9A7335B31A2F16E700359A96 /* ViewController.swift in Sources */,
 				9A7335B11A2F16E700359A96 /* AppDelegate.swift in Sources */,
-				9A4B3D571A31B1F3005DD9CE /* InitViewController.swift in Sources */,
 				9A7335D51A2F36B400359A96 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

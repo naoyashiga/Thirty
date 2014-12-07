@@ -20,27 +20,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fontName = "Didot"
-        let fontSize:CGFloat = 110.0
-        
-        //フォント設定
-        days.font = UIFont(name: fontName, size: fontSize)
-        hours.font = UIFont(name: fontName, size: fontSize)
-        minutes.font = UIFont(name: fontName, size: fontSize)
-        seconds.font = UIFont(name: fontName, size: fontSize)
-        
         //誕生日を設定
         setBirthday()
         // 一秒ごとにupdateを呼び出す
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
-        
-//        println(birthday)
-//        println(xDay)
-        
-        
-//        println(now)
-//        println(components)
-
     }
     
     func setBirthday(){
@@ -52,7 +35,6 @@ class ViewController: UIViewController {
             birthday = ud.objectForKey("birthday") as NSDate
             println(birthday)
         }else{
-            
             //最初に誕生日を設定
             settingAlert()
             println("b")
@@ -84,7 +66,6 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func settingAlert(){
