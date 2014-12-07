@@ -4,49 +4,13 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-EAIntroView.xcscheme</key>
+		<key>Pods.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WSCoachMarksView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-pop.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>2193CB26BE5F2363027A0F87</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>286CDD89BF0AB0B5FA5FEC51</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E4F99D0F17A08100833C4EA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F6DD1271E3E6E70641C3B26A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

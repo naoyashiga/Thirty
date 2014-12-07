@@ -1,16 +1,1 @@
-PODS:
-  - EAIntroView (2.6.4)
-  - pop (1.0.7)
-  - WSCoachMarksView (0.2)
-
-DEPENDENCIES:
-  - EAIntroView (~> 2.6.0)
-  - pop (~> 1.0)
-  - WSCoachMarksView (~> 0.2)
-
-SPEC CHECKSUMS:
-  EAIntroView: 8f66dc6b79f2d52db26af8fc5476a05ffc549d4c
-  pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  WSCoachMarksView: 77046a7df4ec38acb81edfacc717e5275f97a363
-
 COCOAPODS: 0.35.0
