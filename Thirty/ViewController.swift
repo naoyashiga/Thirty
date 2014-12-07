@@ -80,8 +80,8 @@ class ViewController: UIViewController {
     }
 
     func settingAlert(){
-        let alert:UIAlertController = UIAlertController(title:"誕生日を設定",
-            message: "最初にあなたの誕生日を設定しましょう!",
+        let alert:UIAlertController = UIAlertController(title:"Hello!",
+            message: "Please set your birthday.",
             preferredStyle: UIAlertControllerStyle.Alert)
         
         let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
