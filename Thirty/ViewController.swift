@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var myView:UIView!
     var birthday:NSDate!
     var xDay:NSDate!
+    var fontSize:CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
         
         //30年後
         xDay = birthday + 30.year
-       
+        
         //日本時間との時差
         xDay = xDay.beginningOfDay - 15.hours
     }
