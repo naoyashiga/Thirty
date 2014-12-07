@@ -95,9 +95,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK1-Bm-zdf">
-                                <rect key="frame" x="538" y="552" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="535" y="552" width="49" height="30"/>
+                                <state key="normal" title="Setting">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kv6-BZ-goH" kind="show" identifier="setting" id="KMJ-ov-wHu"/>
@@ -154,14 +154,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-KQ-H4S">
-                                <rect key="frame" x="268" y="282" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tej-mN-qBM">
+                                <rect key="frame" x="283" y="550" width="34" height="30"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NYo-tE-6O3" kind="unwind" unwindAction="unwindToTop:" id="cVe-Bp-rvF"/>
+                                </connections>
+                            </button>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wyK-CU-Hyo">
-                                <rect key="frame" x="0.0" y="351" width="600" height="162"/>
+                                <rect key="frame" x="0.0" y="308" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="439387953.36534297">
                                     <!--2014-12-04 12:12:33 +0000-->
                                 </date>
@@ -169,21 +173,11 @@
                                     <action selector="datePickerChanged:" destination="kv6-BZ-goH" eventType="valueChanged" id="0Ek-JL-LyH"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tej-mN-qBM">
-                                <rect key="frame" x="283" y="550" width="34" height="30"/>
-                                <state key="normal" title="back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="NYo-tE-6O3" kind="unwind" unwindAction="unwindToTop:" id="cVe-Bp-rvF"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.73051895330000005" blue="0.69376505239999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="qUD-KQ-H4S" secondAttribute="centerX" id="Et6-Pw-jGo"/>
                             <constraint firstAttribute="centerX" secondItem="wyK-CU-Hyo" secondAttribute="centerX" id="MML-oJ-j8g"/>
-                            <constraint firstAttribute="centerX" secondItem="Tej-mN-qBM" secondAttribute="centerX" id="usi-ai-L9e"/>
+                            <constraint firstItem="83v-ca-tA0" firstAttribute="top" secondItem="Tej-mN-qBM" secondAttribute="bottom" constant="20" id="Zbx-yl-p38"/>
                         </constraints>
                     </view>
                     <connections>
