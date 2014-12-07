@@ -28,7 +28,11 @@ class ViewController: UIViewController {
         if (ud.objectForKey("birthday") != nil){
             //保存した誕生日を取得
             birthday = ud.objectForKey("birthday") as NSDate
+            println(birthday)
         }else{
+            
+            //最初に誕生日を設定
+            settingAlert()
             println("b")
             birthday = NSDate.date(year: 1997, month: 6, day: 2)
         }
@@ -98,6 +102,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func settingAlert(){
+        let alert:UIAlertController = UIAlertController(title:"誕生日を設定",
+            message: "最初にあなたの誕生日を設定しましょう!",
+            preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler:{
+                (action:UIAlertAction!) -> Void in
+                println("OK")
+                self.performSegueWithIdentifier("setting", sender: nil)
+        })
+        alert.addAction(defaultAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
 
     @IBAction func unwindToTop(segue: UIStoryboardSegue) {
     }

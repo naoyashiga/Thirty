@@ -70,26 +70,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1320" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8Z-Bi-VGt">
-                                <rect key="frame" x="180" y="50" width="241" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8Z-Bi-VGt">
+                                <rect key="frame" x="180" y="50" width="241" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="via-B1-QLG">
-                                <rect key="frame" x="241" y="334" width="120" height="125"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="via-B1-QLG">
+                                <rect key="frame" x="241" y="334" width="120" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-l4-QSJ">
-                                <rect key="frame" x="240" y="191" width="120" height="125"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oD-l4-QSJ">
+                                <rect key="frame" x="240" y="191" width="120" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="49" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3s-hF-0y6">
-                                <rect key="frame" x="238" y="467" width="122" height="129"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3s-hF-0y6">
+                                <rect key="frame" x="238" y="467" width="122" height="132"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="110"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -100,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kv6-BZ-goH" kind="show" id="KMJ-ov-wHu"/>
+                                    <segue destination="kv6-BZ-goH" kind="show" identifier="setting" id="KMJ-ov-wHu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,6 +114,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BK1-Bm-zdf" secondAttribute="bottom" constant="18" id="vyE-U7-blW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hww-xe-vGO"/>
                     <connections>
                         <outlet property="days" destination="A8Z-Bi-VGt" id="DKJ-C5-6Wr"/>
                         <outlet property="hours" destination="0oD-l4-QSJ" id="dAp-ug-Wio"/>
@@ -128,18 +129,18 @@
         <!--Navigation Controller-->
         <scene sceneID="FY1-SP-KAw">
             <objects>
-                <navigationController id="TfZ-8S-dWw" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="TfZ-8S-dWw" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t4J-3U-toq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kyL-kC-hWg" kind="relationship" relationship="rootViewController" id="7Sz-8w-pi1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sVs-FP-tDf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q43-Vp-2TI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1354" y="161"/>
+            <point key="canvasLocation" x="-220" y="-684"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="MoS-Sb-Das">
@@ -195,4 +196,7 @@
             <point key="canvasLocation" x="784" y="161"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sVs-FP-tDf"/>
+    </inferredMetricsTieBreakers>
 </document>
