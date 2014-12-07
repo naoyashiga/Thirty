@@ -55,7 +55,7 @@ class SettingViewController: UIViewController{
         
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        
+       
         println(sender.date)
         //ユーザデフォルト
         let ud = NSUserDefaults.standardUserDefaults()
