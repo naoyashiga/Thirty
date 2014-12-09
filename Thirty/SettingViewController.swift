@@ -44,7 +44,8 @@ class SettingViewController: UIViewController{
 //        //今日から30年前
 //        datePicker.minimumDate = NSDate() - 30.year
         datePicker.setDate(startDate, animated: false)
-        //今日から30年前
+        //今日から30年前 プラス1日
+        comp.day = 1
         comp.year = -30
         datePicker.minimumDate = calendar.dateByAddingComponents(comp, toDate: NSDate(), options: nil)
         //今日

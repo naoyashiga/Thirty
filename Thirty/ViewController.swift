@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             //最初に誕生日を設定
             settingAlert()
             println("b")
-//            birthday = NSDate.date(year: 1997, month: 6, day: 2)
         }
         
         //30年後
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
         comp.year = 30
         xDay = calendar.dateByAddingComponents(comp, toDate: birthday, options: nil)!
         //時奥を零時にセット
-        xDay = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: xDay, options: nil)
+        xDay = calendar.dateBySettingHour(0, minute: 0, second: 1, ofDate: xDay, options: nil)
         //日本時間との時差
         comp.hour = -15
         //初期化
@@ -57,15 +56,21 @@ class ViewController: UIViewController {
     }
     
     func update(){
-        let now = NSDate()
-//        println(now)
+        var now = NSDate()
         let calendar = NSCalendar.currentCalendar()
+        var comp = NSDateComponents()
+        //日本との時差
+        comp.hour = 9
+        now = calendar.dateByAddingComponents(comp, toDate: now, options: nil)!
         let components = calendar.components(
             .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
             fromDate: now,
             toDate: xDay,
             options:nil)
         
+        println(now)
+        println(xDay)
+        println(components)
 //        println(components)
         //ラベルを更新
         days.text = String(components.day)
