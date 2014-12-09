@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Timepiece
+//import Timepiece
 
 class SettingViewController: UIViewController{
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -35,10 +35,18 @@ class SettingViewController: UIViewController{
         datePicker.timeZone = NSTimeZone.localTimeZone()
         datePicker.calendar = NSCalendar.currentCalendar()
         
+        let calendar = NSCalendar.currentCalendar()
+        var comp = NSDateComponents()
+        comp.year = -25
+        let startDate = calendar.dateByAddingComponents(comp, toDate: NSDate(), options: nil)!
         //開始日付
-        datePicker.setDate(NSDate() - 25.year, animated: false)
+//        datePicker.setDate(NSDate() - 25.year, animated: false)
+//        //今日から30年前
+//        datePicker.minimumDate = NSDate() - 30.year
+        datePicker.setDate(startDate, animated: false)
         //今日から30年前
-        datePicker.minimumDate = NSDate() - 30.year
+        comp.year = -30
+        datePicker.minimumDate = calendar.dateByAddingComponents(comp, toDate: NSDate(), options: nil)
         //今日
         datePicker.maximumDate = NSDate()
     }

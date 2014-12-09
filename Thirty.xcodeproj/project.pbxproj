@@ -13,8 +13,6 @@
 		9A7335B81A2F16E700359A96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7335B71A2F16E700359A96 /* Images.xcassets */; };
 		9A7335BB1A2F16E700359A96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7335B91A2F16E700359A96 /* LaunchScreen.xib */; };
 		9A7335C71A2F16E700359A96 /* ThirtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335C61A2F16E700359A96 /* ThirtyTests.swift */; };
-		9A7335D11A2F27B300359A96 /* Timepiece.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7335D01A2F27B300359A96 /* Timepiece.framework */; };
-		9A7335D21A2F27B300359A96 /* Timepiece.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7335D01A2F27B300359A96 /* Timepiece.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A7335D51A2F36B400359A96 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335D41A2F36B400359A96 /* SettingViewController.swift */; };
 		E186052EFA6128F854EAC603 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB8112CF556AE3F6C79177 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -29,20 +27,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9A7335D31A2F27B300359A96 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9A7335D21A2F27B300359A96 /* Timepiece.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		2BCB8112CF556AE3F6C79177 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEDE6B444F09A66B7E1870 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +40,6 @@
 		9A7335C01A2F16E700359A96 /* ThirtyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThirtyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7335C51A2F16E700359A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7335C61A2F16E700359A96 /* ThirtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirtyTests.swift; sourceTree = "<group>"; };
-		9A7335D01A2F27B300359A96 /* Timepiece.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timepiece.framework; path = Carthage.build/iOS/Timepiece.framework; sourceTree = "<group>"; };
 		9A7335D41A2F36B400359A96 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9A7335D61A2F46CC00359A96 /* Thirty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thirty-Bridging-Header.h"; sourceTree = "<group>"; };
 		CFE714D006EEFED5C414B660 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A7335D11A2F27B300359A96 /* Timepiece.framework in Frameworks */,
 				E186052EFA6128F854EAC603 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +76,6 @@
 		9A7335A21A2F16E700359A96 = {
 			isa = PBXGroup;
 			children = (
-				9A7335D01A2F27B300359A96 /* Timepiece.framework */,
 				9A7335AD1A2F16E700359A96 /* Thirty */,
 				9A7335C31A2F16E700359A96 /* ThirtyTests */,
 				9A7335AC1A2F16E700359A96 /* Products */,
@@ -171,7 +152,6 @@
 				9A7335A71A2F16E700359A96 /* Sources */,
 				9A7335A81A2F16E700359A96 /* Frameworks */,
 				9A7335A91A2F16E700359A96 /* Resources */,
-				9A7335D31A2F27B300359A96 /* Embed Frameworks */,
 				D60A32A692E34AABF019E202 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -357,7 +337,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -377,6 +358,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -400,7 +382,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -413,6 +396,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -425,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage.build/iOS",
@@ -432,8 +417,10 @@
 				INFOPLIST_FILE = Thirty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Thirty-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -443,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Naoya Sugimoto (5JW3B2ZP2Q)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage.build/iOS",
@@ -450,7 +438,9 @@
 				INFOPLIST_FILE = Thirty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Thirty-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

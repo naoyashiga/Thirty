@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Timepiece
+//import Timepiece
 
 class ViewController: UIViewController {
     @IBOutlet weak var days: UILabel!
@@ -38,18 +38,27 @@ class ViewController: UIViewController {
             //最初に誕生日を設定
             settingAlert()
             println("b")
-            birthday = NSDate.date(year: 1997, month: 6, day: 2)
+//            birthday = NSDate.date(year: 1997, month: 6, day: 2)
         }
         
         //30年後
-        xDay = birthday + 30.year
-        
+        let calendar = NSCalendar.currentCalendar()
+        var comp = NSDateComponents()
+        comp.year = 30
+        xDay = calendar.dateByAddingComponents(comp, toDate: birthday, options: nil)!
+        //時奥を零時にセット
+        xDay = calendar.dateBySettingHour(0, minute: 0, second: 0, ofDate: xDay, options: nil)
         //日本時間との時差
-        xDay = xDay.beginningOfDay - 15.hours
+        comp.hour = -15
+        //初期化
+        comp.year = 0
+        xDay = calendar.dateByAddingComponents(comp, toDate: xDay, options: nil)!
+        println(xDay)
     }
     
     func update(){
         let now = NSDate()
+//        println(now)
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(
             .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
@@ -57,6 +66,7 @@ class ViewController: UIViewController {
             toDate: xDay,
             options:nil)
         
+//        println(components)
         //ラベルを更新
         days.text = String(components.day)
         hours.text = String(components.hour)
