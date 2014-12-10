@@ -42,36 +42,25 @@ class ViewController: UIViewController {
         
         //30年後
         let calendar = NSCalendar.currentCalendar()
+        calendar.timeZone = NSTimeZone.localTimeZone()
         var comp = NSDateComponents()
         comp.year = 30
         xDay = calendar.dateByAddingComponents(comp, toDate: birthday, options: nil)!
         //時奥を零時にセット
         xDay = calendar.dateBySettingHour(0, minute: 0, second: 1, ofDate: xDay, options: nil)
-        //日本時間との時差
-        comp.hour = -15
-        //初期化
-        comp.year = 0
-        xDay = calendar.dateByAddingComponents(comp, toDate: xDay, options: nil)!
+        println(NSDate())
         println(xDay)
     }
     
     func update(){
         var now = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        var comp = NSDateComponents()
-        //日本との時差
-        comp.hour = 9
-        now = calendar.dateByAddingComponents(comp, toDate: now, options: nil)!
+        
         let components = calendar.components(
             .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond,
             fromDate: now,
             toDate: xDay,
             options:nil)
-        
-        println(now)
-        println(xDay)
-        println(components)
-//        println(components)
         //ラベルを更新
         days.text = String(components.day)
         hours.text = String(components.hour)
