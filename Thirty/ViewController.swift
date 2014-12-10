@@ -7,14 +7,12 @@
 //
 
 import UIKit
-//import Timepiece
 
 class ViewController: UIViewController {
     @IBOutlet weak var days: UILabel!
     @IBOutlet weak var hours: UILabel!
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var seconds: UILabel!
-    var myView:UIView!
     var birthday:NSDate!
     var xDay:NSDate!
     
@@ -33,11 +31,9 @@ class ViewController: UIViewController {
         if (ud.objectForKey("birthday") != nil){
             //保存した誕生日を取得
             birthday = ud.objectForKey("birthday") as NSDate
-            println(birthday)
         }else{
             //最初に誕生日を設定
             settingAlert()
-            println("b")
         }
         
         //30年後
@@ -81,7 +77,6 @@ class ViewController: UIViewController {
             style: UIAlertActionStyle.Default,
             handler:{
                 (action:UIAlertAction!) -> Void in
-                println("OK")
                 self.performSegueWithIdentifier("setting", sender: nil)
         })
         alert.addAction(defaultAction)
