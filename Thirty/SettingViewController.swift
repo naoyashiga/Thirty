@@ -43,4 +43,8 @@ class SettingViewController: UIViewController{
         ud.setObject(sender.date, forKey: "birthday")
         ud.synchronize()
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

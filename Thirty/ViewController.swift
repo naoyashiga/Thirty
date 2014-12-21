@@ -88,6 +88,10 @@ class ViewController: UIViewController {
         //誕生日を再設定
         setBirthday()
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
 }
 
