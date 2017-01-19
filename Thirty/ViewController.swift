@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var days: UILabel!
     @IBOutlet weak var hours: UILabel!
     @IBOutlet weak var minutes: UILabel!
     @IBOutlet weak var seconds: UILabel!
+    var audioPlayer = AVAudioPlayer()
     var birthday:NSDate!
     var xDay:NSDate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //サウンド準備
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Pop", ofType: "aiff")!)
+        var error:NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
         //誕生日を設定
         setBirthday()
         // 一秒ごとにupdateを呼び出す
@@ -29,11 +35,15 @@ class ViewController: UIViewController {
         let ud = NSUserDefaults.standardUserDefaults()
         
         if (ud.objectForKey("birthday") != nil){
+            println("second")
             //保存した誕生日を取得
             birthday = ud.objectForKey("birthday") as NSDate
         }else{
+            println("init")
             //最初に誕生日を設定
             settingAlert()
+            
+            birthday = NSDate()
         }
         
         //30年後
@@ -57,6 +67,9 @@ class ViewController: UIViewController {
             fromDate: now,
             toDate: xDay,
             options:nil)
+        
+        //サウンド再生
+        audioPlayer.play()
         //ラベルを更新
         days.text = String(components.day)
         hours.text = String(components.hour)

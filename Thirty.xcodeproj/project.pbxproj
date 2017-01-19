@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A35B7CB1A7463AC0014E089 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9A35B7CA1A7463AC0014E089 /* Pop.aiff */; };
 		9A7335B11A2F16E700359A96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335B01A2F16E700359A96 /* AppDelegate.swift */; };
 		9A7335B31A2F16E700359A96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7335B21A2F16E700359A96 /* ViewController.swift */; };
 		9A7335B61A2F16E700359A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7335B41A2F16E700359A96 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		2BCB8112CF556AE3F6C79177 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BEDE6B444F09A66B7E1870 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9A35B7CA1A7463AC0014E089 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = "<group>"; };
 		9A7335AB1A2F16E700359A96 /* Thirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7335AF1A2F16E700359A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A7335B01A2F16E700359A96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		9A7335AD1A2F16E700359A96 /* Thirty */ = {
 			isa = PBXGroup;
 			children = (
+				9A35B7CA1A7463AC0014E089 /* Pop.aiff */,
 				9A7335B01A2F16E700359A96 /* AppDelegate.swift */,
 				9A7335B21A2F16E700359A96 /* ViewController.swift */,
 				9A7335B41A2F16E700359A96 /* Main.storyboard */,
@@ -226,6 +229,7 @@
 				9A7335B61A2F16E700359A96 /* Main.storyboard in Resources */,
 				9A7335BB1A2F16E700359A96 /* LaunchScreen.xib in Resources */,
 				9A7335B81A2F16E700359A96 /* Images.xcassets in Resources */,
+				9A35B7CB1A7463AC0014E089 /* Pop.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
